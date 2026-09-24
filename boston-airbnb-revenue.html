@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boston Airbnb Revenue Optimization | Jack Dermody</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f8fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 44px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin: 12px auto 0;
+      max-width: 800px;
+      color: #d1d5db;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e0ecff;
+      color: #1d4ed8;
+      padding: 5px 9px;
+      margin: 4px 4px 4px 0;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Boston Airbnb Revenue Optimization</h1>
+    <p>
+      Applied analytics project examining how pricing, minimum-night requirements,
+      listing size, host quality, and neighborhood affect Airbnb revenue performance in Boston.
+    </p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#overview">Overview</a>
+    <a href="#methods">Methods</a>
+    <a href="#findings">Findings</a>
+    <a href="#skills">Skills</a>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>Project Overview</h2>
+      <p>
+        This project analyzed Boston Airbnb listing-level data to understand what factors
+        influence revenue and occupancy performance. The analysis focused on pricing strategy,
+        minimum-night requirements, listing size, host reputation, and neighborhood effects.
+      </p>
+
+      <p>
+        The goal was to identify patterns that could help short-term rental hosts make better
+        decisions about pricing, booking flexibility, property positioning, and location strategy.
+      </p>
+    </section>
+
+    <section id="business-problem">
+      <h2>Business Problem</h2>
+      <p>
+        Airbnb hosts operate in a market where guests rely on visible listing characteristics
+        to judge value before booking. Because hosts cannot directly control every aspect of
+        demand, the project examined which listing attributes and host-controlled decisions
+        were most strongly associated with revenue outcomes.
+      </p>
+
+      <p>
+        The central questions were whether pricing strategies and minimum-night requirements
+        affect occupancy and revenue, and whether neighborhood location meaningfully changes
+        a listing’s revenue-generating ability.
+      </p>
+    </section>
+
+    <section id="methods">
+      <h2>Methods and Workflow</h2>
+      <ul>
+        <li>Cleaned and prepared Airbnb listing data using Excel and Python.</li>
+        <li>Removed unnecessary columns, handled missing values, and converted relevant fields into usable data types.</li>
+        <li>Explored listing performance across price, minimum-night requirements, neighborhood, bedrooms, beds, accommodations, and host quality indicators.</li>
+        <li>Created visualizations to compare revenue and occupancy patterns across listing segments.</li>
+        <li>Built regression models using control variables, main effects, and interaction terms to evaluate revenue drivers.</li>
+        <li>Translated statistical results into business recommendations for hosts and property decision-makers.</li>
+      </ul>
+    </section>
+
+    <section id="findings">
+      <h2>Key Findings</h2>
+      <ul>
+        <li>Listings with more flexible minimum-night requirements generally performed better than listings with stricter stay requirements.</li>
+        <li>Downtown Boston showed stronger revenue performance than many other neighborhoods, suggesting that location was an important demand driver.</li>
+        <li>Medium-to-large listings could generate strong revenue, but larger listings also carried higher vacancy risk depending on location and demand.</li>
+        <li>Host quality indicators, such as Superhost status, response rate, and review count, were meaningful signals associated with revenue performance.</li>
+        <li>Regression results suggested that minimum-night requirements, neighborhood, listing size, and host reputation should be considered together rather than in isolation.</li>
+      </ul>
+    </section>
+
+    <section id="business-impact">
+      <h2>Business Recommendations</h2>
+      <ul>
+        <li>Prioritize flexible booking policies to avoid reducing the pool of potential guests.</li>
+        <li>Use neighborhood demand patterns when evaluating pricing and property investment decisions.</li>
+        <li>Emphasize host reliability signals, such as response rate, guest reviews, and Superhost status.</li>
+        <li>Consider listing size and location together, since larger properties may perform best in higher-demand areas.</li>
+        <li>Use both revenue and occupancy when evaluating performance, rather than relying on one metric alone.</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills Demonstrated</h2>
+      <span class="tag">Python</span>
+      <span class="tag">Excel</span>
+      <span class="tag">Tableau</span>
+      <span class="tag">Regression Analysis</span>
+      <span class="tag">Data Cleaning</span>
+      <span class="tag">Exploratory Data Analysis</span>
+      <span class="tag">Data Visualization</span>
+      <span class="tag">Feature Engineering</span>
+      <span class="tag">Business Analytics</span>
+      <span class="tag">Statistical Modeling</span>
+      <span class="tag">Presentation Development</span>
+    </section>
+
+    <section id="takeaways">
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Completed an end-to-end analytics project from raw data preparation through statistical modeling and business recommendations.</li>
+        <li>Used Python and regression modeling to evaluate how listing characteristics influence revenue outcomes.</li>
+        <li>Connected analytical findings to practical decisions around pricing, booking flexibility, property size, and neighborhood strategy.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Jack Dermody
+  </footer>
+
+</body>
+</html>
