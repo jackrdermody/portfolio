@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NHL Contract Valuation | Jack Dermody</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f8fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 44px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin: 12px auto 0;
+      max-width: 800px;
+      color: #d1d5db;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e0ecff;
+      color: #1d4ed8;
+      padding: 5px 9px;
+      margin: 4px 4px 4px 0;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 10px;
+      padding: 10px 14px;
+      background: #2563eb;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button.secondary {
+      background: #374151;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NHL Contract Valuation</h1>
+    <p>
+      Predictive modeling and Tableau dashboard project estimating NHL player contract value
+      using performance, contract, and salary cap data.
+    </p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#overview">Overview</a>
+    <a href="#methods">Methods</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#skills">Skills</a>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>Project Overview</h2>
+      <p>
+        This page provides a shorter portfolio snapshot of my master’s thesis project. The fully built-out
+        thesis dashboard and player card site can be viewed here:
+      </p>
+
+      <a class="button" href="https://jackrdermody.github.io/NHL_Contract_Valuation_Player_Cards/" target="_blank">
+        View Full NHL Contract Valuation Dashboard
+      </a>
+
+      <p>
+        This project was developed as my master’s thesis in Business Analytics at Elon University.
+        The goal was to estimate NHL player contract value by analyzing historical player performance,
+        contract outcomes, salary cap context, and player-level attributes.
+      </p>
+
+      <p>
+        The final output included a predictive modeling workflow and an interactive Tableau dashboard
+        designed to present player-level contract valuation cards. The dashboard allows users to review
+        model-based contract expectations and compare them against actual contract outcomes.
+      </p>
+    </section>
+
+    <section id="business-problem">
+      <h2>Business Problem</h2>
+      <p>
+        NHL teams must evaluate player contracts under salary cap constraints, where overpaying or
+        undervaluing players can affect roster construction and long-term competitiveness. This project
+        approached contract valuation as a predictive analytics problem: using historical data to estimate
+        a player’s expected contract value based on performance, position, age, team control, and other
+        relevant factors.
+      </p>
+    </section>
+
+    <section id="methods">
+      <h2>Methods and Workflow</h2>
+      <ul>
+        <li>Cleaned, merged, and structured player performance, contract, and salary cap datasets.</li>
+        <li>Created features related to contract value, salary cap percentage, player age, position, draft status, and on-ice performance.</li>
+        <li>Tested multiple modeling approaches, including regression, regularized regression, random forest, gradient boosting, and XGBoost.</li>
+        <li>Compared model performance using error metrics and selected the strongest-performing model for contract value estimation.</li>
+        <li>Translated model outputs into player-level visuals through an interactive Tableau dashboard.</li>
+      </ul>
+    </section>
+
+    <section id="dashboard">
+      <h2>Final Dashboard</h2>
+      <p>
+        The Tableau dashboard presents individual player cards with contract projections, actual contract
+        outcomes, and key valuation context. The goal was to make the model results easier to understand
+        for both technical and non-technical users.
+      </p>
+
+      <p>
+        The dashboard emphasizes practical communication: instead of only showing model metrics, it
+        organizes the outputs around individual players so users can quickly interpret projected value,
+        contract comparisons, and important valuation factors.
+      </p>
+
+      <a class="button" href="https://jackrdermody.github.io/NHL_Contract_Valuation_Player_Cards/" target="_blank">
+        Open Interactive Dashboard
+      </a>
+    </section>
+
+    <section id="skills">
+      <h2>Skills Demonstrated</h2>
+      <span class="tag">Python</span>
+      <span class="tag">Tableau</span>
+      <span class="tag">Predictive Modeling</span>
+      <span class="tag">Feature Engineering</span>
+      <span class="tag">Regression</span>
+      <span class="tag">Random Forest</span>
+      <span class="tag">Gradient Boosting</span>
+      <span class="tag">XGBoost</span>
+      <span class="tag">Data Cleaning</span>
+      <span class="tag">Model Evaluation</span>
+      <span class="tag">Dashboard Design</span>
+      <span class="tag">Business Analytics</span>
+    </section>
+
+    <section id="takeaways">
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Built an end-to-end analytics workflow from raw data preparation through model development and dashboard communication.</li>
+        <li>Used machine learning models to estimate player contract value and compare expected outcomes against actual contracts.</li>
+        <li>Designed the final output around usability, allowing users to interpret contract projections through player-level dashboard cards.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Jack Dermody
+  </footer>
+
+</body>
+</html>
