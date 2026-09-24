@@ -1,24 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jack Dermody | Analytics Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f8fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 48px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+
+    header p {
+      margin: 12px auto 0;
+      max-width: 700px;
+      color: #d1d5db;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e0ecff;
+      color: #1d4ed8;
+      padding: 4px 8px;
+      margin: 4px 4px 4px 0;
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Jack Dermody</h1>
-  <h2>Business Analytics Portfolio</h2>
 
-  <p>
-    Recent Elon University graduate with a Bachelor's and Master's in Business Analytics.
-    Interested in data analytics, business intelligence, reporting, and predictive modeling roles.
-  </p>
+  <header>
+    <h1>Jack Dermody</h1>
+    <p>
+      Business Analytics graduate with experience in SQL, Python, Power BI, Tableau,
+      forecasting, predictive modeling, and business intelligence.
+    </p>
+  </header>
 
-  <h2>Projects</h2>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <ul>
-    <li>NHL Contract Valuation</li>
-    <li>Boston Airbnb Revenue Optimization</li>
-    <li>Gildan Demand Forecasting</li>
-  </ul>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I recently graduated from Elon University with both a Bachelor’s and Master’s
+        in Business Analytics. My project work focuses on turning raw data into useful
+        analysis, dashboards, forecasts, and business recommendations.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>NHL Contract Valuation</h3>
+          <p>
+            Predictive modeling project estimating NHL contract value using player performance,
+            contract, and salary cap data. Includes model comparison and an interactive Tableau dashboard.
+          </p>
+          <span class="tag">Python</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Predictive Modeling</span>
+          <span class="tag">Feature Engineering</span>
+        </div>
+
+        <div class="project-card">
+          <h3>Boston Airbnb Revenue Optimization</h3>
+          <p>
+            Analyzed Boston Airbnb listing data to evaluate revenue and occupancy drivers,
+            including pricing, minimum-night requirements, listing size, host quality, and neighborhood effects.
+          </p>
+          <span class="tag">Python</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Regression</span>
+          <span class="tag">Business Analytics</span>
+        </div>
+
+        <div class="project-card">
+          <h3>Gildan Demand Forecasting</h3>
+          <p>
+            Built hierarchical demand forecasting models for SKU-level retail sales,
+            comparing baseline, machine learning, and sequence models to support supply planning decisions.
+          </p>
+          <span class="tag">Python</span>
+          <span class="tag">XGBoost</span>
+          <span class="tag">Forecasting</span>
+          <span class="tag">Supply Chain Analytics</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>
+        SQL, Python, Power BI, Tableau, Excel, statistical modeling, forecasting,
+        dashboard development, data visualization, business intelligence, data cleaning,
+        KPI reporting, and stakeholder communication.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: jackrdermody@gmail.com<br>
+        LinkedIn: Add your LinkedIn URL here<br>
+        GitHub: Add your GitHub URL here
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Jack Dermody
+  </footer>
+
 </body>
 </html>
