@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gildan Demand Forecasting | Jack Dermody</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f8fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 44px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin: 12px auto 0;
+      max-width: 800px;
+      color: #d1d5db;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e0ecff;
+      color: #1d4ed8;
+      padding: 5px 9px;
+      margin: 4px 4px 4px 0;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Gildan Demand Forecasting</h1>
+    <p>
+      Hierarchical forecasting project using retail POS data, machine learning, and demand drivers
+      to support SKU-level production, capacity, and materials planning decisions.
+    </p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#overview">Overview</a>
+    <a href="#methods">Methods</a>
+    <a href="#results">Results</a>
+    <a href="#skills">Skills</a>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>Project Overview</h2>
+      <p>
+        This project focused on forecasting weekly retail sales for a clothing manufacturer across
+        multiple product styles and sizes. The business challenge was to create SKU-level forecasts
+        that could support operational planning while remaining consistent across higher-level
+        product group and total portfolio forecasts.
+      </p>
+
+      <p>
+        The final goal was to forecast January 2025 through December 2025 demand and evaluate
+        which forecasting approach best supported supply chain decisions such as production,
+        capacity planning, and materials purchasing.
+      </p>
+    </section>
+
+    <section id="business-problem">
+      <h2>Business Problem</h2>
+      <p>
+        Different teams require forecasts at different levels of detail. Supply planning needs
+        accurate top-line forecasts for materials and capacity decisions, while operations teams
+        need more granular size-level SKU forecasts for cutting, sewing, and inventory planning.
+      </p>
+
+      <p>
+        The project evaluated how to generate forecasts that were accurate at the SKU level while
+        also reconciling cleanly to broader product group and total portfolio views.
+      </p>
+    </section>
+
+    <section id="methods">
+      <h2>Methods and Workflow</h2>
+      <ul>
+        <li>Prepared weekly POS, pricing, shipment, inventory, and distribution data for forecasting.</li>
+        <li>Created time-series features including lag variables, rolling averages, calendar features, and seasonal indicators.</li>
+        <li>Compared baseline forecasting methods against machine learning and sequence-based approaches.</li>
+        <li>Tested models including naive forecasting, ARIMA, Random Forest, XGBoost, and GRU.</li>
+        <li>Used time-series cross-validation and hyperparameter tuning to improve model performance.</li>
+        <li>Evaluated forecasts across SKU, product group, and total portfolio levels.</li>
+        <li>Compared bottom-up and top-down hierarchical reconciliation approaches.</li>
+      </ul>
+    </section>
+
+    <section id="modeling">
+      <h2>Modeling Approach</h2>
+      <p>
+        The project began with simple baseline methods to establish a reference point, then moved
+        into more advanced models capable of capturing nonlinear relationships and demand drivers.
+        XGBoost was selected as the strongest model because it provided high forecast accuracy while
+        still allowing for interpretation through feature importance and SHAP-style analysis.
+      </p>
+
+      <p>
+        Key drivers included prior-week demand, seasonal timing, recent rolling demand averages,
+        price, retailer inventory, and distribution-related signals. The project also evaluated the
+        tradeoff between forecast accuracy and model explainability.
+      </p>
+    </section>
+
+    <section id="results">
+      <h2>Key Results</h2>
+      <ul>
+        <li>XGBoost outperformed baseline, Random Forest, and GRU models across the project’s forecast evaluation levels.</li>
+        <li>Bottom-up reconciliation preserved SKU-level demand behavior better than top-down allocation.</li>
+        <li>Forecast accuracy improved at higher aggregation levels, while lower-volume SKUs remained more difficult to predict.</li>
+        <li>Price, retailer inventory, lag demand, and seasonal effects were important demand signals.</li>
+        <li>The final recommendation was to use different forecast signals depending on the planning horizon.</li>
+      </ul>
+    </section>
+
+    <section id="business-impact">
+      <h2>Business Recommendations</h2>
+      <ul>
+        <li>Use short-term SKU-level forecasts for production and inventory allocation decisions.</li>
+        <li>Use quarterly product group forecasts for capacity and labor planning.</li>
+        <li>Use longer-horizon aggregated forecasts for materials planning, with forecast ranges rather than point estimates.</li>
+        <li>Adjust production planning for under-forecast bias to reduce stockout risk and improve service levels.</li>
+        <li>Incorporate additional external data such as promotional calendars, retailer POS feeds, distribution velocity, and macroeconomic indicators to improve future forecast quality.</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills Demonstrated</h2>
+      <span class="tag">Python</span>
+      <span class="tag">Forecasting</span>
+      <span class="tag">XGBoost</span>
+      <span class="tag">Random Forest</span>
+      <span class="tag">ARIMA</span>
+      <span class="tag">GRU</span>
+      <span class="tag">Time-Series Analysis</span>
+      <span class="tag">Feature Engineering</span>
+      <span class="tag">Model Evaluation</span>
+      <span class="tag">Hierarchical Forecasting</span>
+      <span class="tag">Supply Chain Analytics</span>
+      <span class="tag">Business Recommendations</span>
+    </section>
+
+    <section id="takeaways">
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Built a forecasting workflow that connected technical model performance to practical supply chain planning decisions.</li>
+        <li>Compared multiple forecasting approaches and selected the model that best balanced accuracy, interpretability, and business usefulness.</li>
+        <li>Translated forecast results into recommendations for production, capacity, and materials planning across different decision horizons.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Jack Dermody
+  </footer>
+
+</body>
+</html>
